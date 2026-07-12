@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SimFusion — Research, AI & Software Innovation Studio</title>
+  <meta name="description" content="SimFusion is a research and innovation studio building AI, VR/AR/MR, medical & education software, web & mobile apps, games, UI/UX and digital marketing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23e9e94c' d='M16 2l12 7v14l-12 7L4 23V9z'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#top" class="brand" aria-label="SimFusion home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="26" height="26"><path d="M16 2l12 7v14l-12 7L4 23V9z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 9l6 3.5v7L16 23l-6-3.5v-7z" fill="currentColor"/></svg>
+      </span>
+      <span class="brand-name">SIMFUSION</span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#work">What we do</a>
+      <a href="#industries">Industries</a>
+      <a href="#process">Process</a>
+      <a href="#contact" class="nav-cta">Start a Project</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="top">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-scrim"></div>
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+    <div class="hero-grid-overlay"></div>
+    <div class="hero-badge"><span class="dot"></span> SIMFUSION · RESEARCH &amp; INNOVATION STUDIO</div>
+
+    <div class="hero-inner">
+      <div class="section-label reveal">// 001 — RESEARCH · INNOVATION · ENGINEERING</div>
+      <h1 class="hero-title">
+        <span class="reveal">WE ENGINEER</span>
+        <span class="reveal delay-1">the future of <em>software</em>.</span>
+      </h1>
+      <p class="hero-sub reveal delay-2">
+        A research &amp; innovation studio turning bold ideas into AI systems, immersive
+        XR, medical &amp; education platforms, apps, games and brands — end to end.
+      </p>
+      <div class="hero-actions reveal delay-3">
+        <a href="#contact" class="btn btn-primary">START A PROJECT</a>
+        <a href="#services" class="btn btn-ghost">EXPLORE SERVICES →</a>
+      </div>
+    </div>
+    <div class="hero-corner">37.9° N · 122.3° W · AI · XR · SOFTWARE</div>
+    <div class="scroll-hint"><span></span> SCROLL TO EXPLORE</div>
+  </section>
+
+  <!-- ===================== MARQUEE / TRUST ===================== -->
+  <section class="trust">
+    <div class="section-label center">// CAPABILITIES WE SHIP</div>
+    <div class="marquee">
+      <div class="marquee-track">
+        <span>ARTIFICIAL INTELLIGENCE</span><i>◆</i>
+        <span>VIRTUAL &amp; AUGMENTED REALITY</span><i>◆</i>
+        <span>MEDICAL SOFTWARE</span><i>◆</i>
+        <span>GAME DEVELOPMENT</span><i>◆</i>
+        <span>WEB &amp; MOBILE APPS</span><i>◆</i>
+        <span>UI / UX DESIGN</span><i>◆</i>
+        <span>DIGITAL MARKETING</span><i>◆</i>
+        <span>RESEARCH &amp; CONFERENCES</span><i>◆</i>
+        <span>ARTIFICIAL INTELLIGENCE</span><i>◆</i>
+        <span>VIRTUAL &amp; AUGMENTED REALITY</span><i>◆</i>
+        <span>MEDICAL SOFTWARE</span><i>◆</i>
+        <span>GAME DEVELOPMENT</span><i>◆</i>
+        <span>WEB &amp; MOBILE APPS</span><i>◆</i>
+        <span>UI / UX DESIGN</span><i>◆</i>
+        <span>DIGITAL MARKETING</span><i>◆</i>
+        <span>RESEARCH &amp; CONFERENCES</span><i>◆</i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES GRID ===================== -->
+  <section class="services" id="services">
+    <div class="section-head">
+      <div class="section-label reveal">// 002 — WHAT WE BUILD</div>
+      <h2 class="section-title reveal">ONE STUDIO, <em>every</em> discipline.</h2>
+      <p class="section-desc reveal">From lab research to shipped product — our teams cover the full stack of modern software and immersive technology.</p>
+    </div>
+
+    <div class="service-grid">
+      <article class="service-card reveal" data-num="01">
+        <div class="svc-media"><img src="assets/research.jpg" alt="Research & Innovation" loading="lazy" /></div>
+        <div class="svc-body">
+          <h3>Research &amp; Innovation</h3>
+          <p>Applied R&amp;D, prototyping and proof-of-concepts that turn emerging science into real, deployable products.</p>
+          <div class="svc-tags"><span>Prototyping</span><span>R&amp;D</span><span>PoC</span></div>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-num="02">
+        <div class="svc-media"><img src="assets/ai.jpg" alt="AI Technologies" loading="lazy" /></div>
+        <div class="svc-body">
+          <h3>AI Technologies</h3>
+          <p>Machine learning, computer vision, LLMs and generative AI — from model training to production-grade pipelines.</p>
+          <div class="svc-tags"><span>LLMs</span><span>Vision</span><span>MLOps</span></div>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-num="03">
+        <div class="svc-media"><img src="assets/conference.jpg" alt="Conferences" loading="lazy" /></div>
+        <div class="svc-body">
+          <h3>Conferences</h3>
+          <p>Organising research &amp; software conferences — from call-for-papers platforms to live event and submission systems.</p>
+          <div class="svc-tags"><span>Research</span><span>Software</span><span>Events</span></div>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-num="04">
+        <div class="svc-media"><img src="assets/xr.jpg" alt="VR / AR / MR" loading="lazy" /></div>
+        <div class="svc-body">
+          <h3>VR / AR / MR</h3>
+          <p>Immersive experiences and mixed-reality apps for training, visualisation, retail and entertainment.</p>
+          <div class="svc-tags"><span>Unity</span><span>Unreal</span><span>WebXR</span></div>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-num="05">
+        <div class="svc-media"><img src="assets/medical.jpg" alt="Medical & Education Software" loading="lazy" /></div>
+        <div class="svc-body">
+          <h3>Medical &amp; Education Software</h3>
+          <p>HealthTech and EdTech platforms — patient tools, diagnostics support, LMS and interactive learning apps.</p>
+          <div class="svc-tags"><span>HealthTech</span><span>EdTech</span><span>LMS</span></div>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-num="06">
+        <div class="svc-media"><img src="assets/apps.jpg" alt="Web, Android & iOS Apps" loading="lazy" /></div>
+        <div class="svc-body">
+          <h3>Web, Android &amp; iOS Apps</h3>
+          <p>Scalable web apps and native/cross-platform mobile products built for performance and growth.</p>
+          <div class="svc-tags"><span>Web</span><span>Android</span><span>iOS</span></div>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-num="07">
+        <div class="svc-media"><img src="assets/game.jpg" alt="Game Development" loading="lazy" /></div>
+        <div class="svc-body">
+          <h3>Game Development</h3>
+          <p>2D/3D and hyper-casual games, WebGL builds, live-ops, ads &amp; monetisation across mobile and desktop.</p>
+          <div class="svc-tags"><span>Unity</span><span>WebGL</span><span>Live-ops</span></div>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-num="08">
+        <div class="svc-media"><img src="assets/uiux.jpg" alt="UI / UX Design" loading="lazy" /></div>
+        <div class="svc-body">
+          <h3>UI / UX Design</h3>
+          <p>Research-driven product design, design systems and prototypes that make complex products feel effortless.</p>
+          <div class="svc-tags"><span>Design Systems</span><span>Prototyping</span></div>
+        </div>
+      </article>
+
+      <article class="service-card reveal" data-num="09">
+        <div class="svc-media"><img src="assets/marketing.jpg" alt="Digital Marketing" loading="lazy" /></div>
+        <div class="svc-body">
+          <h3>Digital Marketing</h3>
+          <p>Performance marketing, SEO, content and brand growth engineered around your product and analytics.</p>
+          <div class="svc-tags"><span>SEO</span><span>Ads</span><span>Growth</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURE BLOCKS ===================== -->
+  <section class="feature" id="work">
+    <div class="feature-inner">
+      <div class="feature-copy reveal">
+        <div class="section-label">// 003 — AI TECHNOLOGIES</div>
+        <h2 class="feature-title">Intelligence, <em>engineered</em> in.</h2>
+        <p>We design and ship AI that actually works in production — vision models, LLM-powered assistants, recommendation engines and generative pipelines, wrapped in reliable infrastructure and clean interfaces.</p>
+        <ul class="feature-list">
+          <li>Computer vision &amp; detection</li>
+          <li>LLM apps &amp; RAG systems</li>
+          <li>Generative AI &amp; automation</li>
+          <li>Model training &amp; MLOps</li>
+        </ul>
+      </div>
+      <div class="feature-visual reveal">
+        <div class="media-frame"><img src="assets/ai.jpg" alt="AI robotics" loading="lazy" /></div>
+        <div class="float-card fc-tr">
+          <div class="ai-bars"><i style="--h:70%"></i><i style="--h:90%"></i><i style="--h:45%"></i><i style="--h:80%"></i><i style="--h:60%"></i><i style="--h:95%"></i></div>
+          <span class="fc-label">● INFERENCE LIVE · <b class="count" data-to="98">0</b>.4%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature feature-alt">
+    <div class="feature-inner reverse">
+      <div class="feature-copy reveal">
+        <div class="section-label">// 004 — VR / AR / MR</div>
+        <h2 class="feature-title">Worlds you can <em>step into</em>.</h2>
+        <p>Immersive simulations, training environments and mixed-reality apps built in Unity and Unreal — from medical training and industrial digital twins to games and interactive brand experiences.</p>
+        <ul class="feature-list">
+          <li>Immersive training &amp; sims</li>
+          <li>AR product &amp; retail apps</li>
+          <li>WebXR experiences</li>
+          <li>3D &amp; digital twins</li>
+        </ul>
+      </div>
+      <div class="feature-visual reveal">
+        <div class="media-frame"><img src="assets/xr.jpg" alt="VR headset" loading="lazy" /></div>
+        <div class="float-card fc-bl">
+          <span class="fc-big">6DOF</span>
+          <span class="fc-label">IMMERSIVE · REALTIME</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature">
+    <div class="feature-inner">
+      <div class="feature-copy reveal">
+        <div class="section-label">// 005 — GAME DEVELOPMENT</div>
+        <h2 class="feature-title">Games that <em>ship &amp; scale</em>.</h2>
+        <p>We build and port 2D/3D and hyper-casual games across mobile, desktop and WebGL — complete with AdMob, Firebase analytics, remote config and live-ops so your titles grow after launch.</p>
+        <ul class="feature-list">
+          <li>Unity &amp; WebGL builds</li>
+          <li>Ads &amp; monetisation</li>
+          <li>Analytics &amp; live-ops</li>
+          <li>Cross-platform release</li>
+        </ul>
+      </div>
+      <div class="feature-visual reveal">
+        <div class="media-frame"><img src="assets/game.jpg" alt="Game development" loading="lazy" /></div>
+        <div class="float-card fc-tr">
+          <span class="fc-big count" data-to="1240">0</span>
+          <span class="fc-label">PLAYS · 42% RETENTION</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INDUSTRIES ===================== -->
+  <section class="industries" id="industries">
+    <div class="section-head">
+      <div class="section-label reveal">// 006 — WHO WE BUILD FOR</div>
+      <h2 class="section-title reveal">Built for teams <em>shipping</em> what's next.</h2>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-card reveal"><b>01</b><h3>Healthcare</h3><p>Diagnostics, patient platforms &amp; medical training software.</p></div>
+      <div class="industry-card reveal"><b>02</b><h3>Education</h3><p>LMS, interactive learning &amp; research collaboration tools.</p></div>
+      <div class="industry-card reveal"><b>03</b><h3>Enterprise</h3><p>AI automation, internal tools &amp; data platforms.</p></div>
+      <div class="industry-card reveal"><b>04</b><h3>Entertainment</h3><p>Games, XR experiences &amp; interactive media.</p></div>
+      <div class="industry-card reveal"><b>05</b><h3>Startups</h3><p>MVPs, product design &amp; go-to-market growth.</p></div>
+      <div class="industry-card reveal"><b>06</b><h3>Research Labs</h3><p>Prototypes, conferences &amp; publication platforms.</p></div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT STRIP ===================== -->
+  <section class="about">
+    <div class="about-media"><img src="assets/team.jpg" alt="SimFusion team" loading="lazy" /></div>
+    <div class="about-copy reveal">
+      <div class="section-label">// ABOUT SIMFUSION</div>
+      <h2 class="about-title">One team, from <em>research</em> to <em>release</em>.</h2>
+      <p>SimFusion is a multidisciplinary research &amp; innovation studio. We bring engineers, researchers, designers and marketers under one roof — so an idea can travel from a whiteboard concept to a shipped, marketed product without ever leaving the building.</p>
+      <div class="stats">
+        <div class="stat"><b class="count" data-to="12">0</b><span>+ Products shipped</span></div>
+        <div class="stat"><b class="count" data-to="9">0</b><span>Core disciplines</span></div>
+        <div class="stat"><b class="count" data-to="8">0</b><span>+ Years R&amp;D</span></div>
+        <div class="stat"><b class="count" data-to="100">0</b><span>% In-house</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESS ===================== -->
+  <section class="process" id="process">
+    <div class="section-head">
+      <div class="section-label reveal">// 007 — HOW WE WORK</div>
+      <h2 class="section-title reveal">From <em>idea</em> to launch.</h2>
+    </div>
+    <div class="process-track">
+      <div class="proc-step reveal"><span>01</span><h3>Discover</h3><p>Research, scope &amp; strategy. We map the problem before writing a line of code.</p></div>
+      <div class="proc-step reveal"><span>02</span><h3>Design</h3><p>UX, architecture &amp; prototypes to validate direction fast.</p></div>
+      <div class="proc-step reveal"><span>03</span><h3>Build</h3><p>Agile engineering across AI, XR, web, mobile &amp; games.</p></div>
+      <div class="proc-step reveal"><span>04</span><h3>Launch &amp; Grow</h3><p>Deploy, measure, market and iterate for real traction.</p></div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA / CONTACT ===================== -->
+  <section class="cta" id="contact">
+    <div class="cta-inner reveal">
+      <div class="section-label center">// 008 — LET'S BUILD</div>
+      <h2 class="cta-title">Have an idea? <em>Let's forge it.</em></h2>
+      <p>Tell us what you want to build — AI, an app, a game, an immersive experience or a full research platform — and we'll make it real.</p>
+      <form class="cta-form" id="contactForm" novalidate>
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Email address" required />
+        <input type="text" name="project" placeholder="What do you want to build?" />
+        <button type="submit" class="btn btn-primary">SEND REQUEST →</button>
+      </form>
+      <p class="form-note" id="formNote"></p>
+      <a class="cta-mail" href="mailto:simfusion26@gmail.com">simfusion26@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-name">SIMFUSION</span>
+        <p>Research &amp; innovation studio for AI, XR and modern software.</p>
+        <a class="footer-mail" href="mailto:simfusion26@gmail.com">simfusion26@gmail.com</a>
+      </div>
+      <div class="footer-cols">
+        <div><h4>Services</h4><a href="#services">AI Technologies</a><a href="#services">VR / AR / MR</a><a href="#services">Web &amp; Mobile</a><a href="#services">Game Dev</a></div>
+        <div><h4>Company</h4><a href="#work">What we do</a><a href="#process">Process</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div>
+        <div><h4>Connect</h4><a href="mailto:simfusion26@gmail.com">Email us</a><a href="#">LinkedIn</a><a href="#">X / Twitter</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> SimFusion. All rights reserved.</span>
+      <span>Designed &amp; engineered in-house.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
