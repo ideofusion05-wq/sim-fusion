@@ -3,307 +3,269 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SimFusion — Research, AI & Software Innovation Studio</title>
-  <meta name="description" content="SimFusion is a research and innovation studio building AI, VR/AR/MR, medical & education software, web & mobile apps, games, UI/UX and digital marketing." />
+  <title>SIMFUSION — Where Simulation & Reality Converge</title>
+  <meta name="description" content="SIMFUSION builds 3D modeling, digital twins, AR/VR, game and AI/ML solutions for high-stakes environments — from operating rooms to defence platforms." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23e9e94c' d='M16 2l12 7v14l-12 7L4 23V9z'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='9' cy='12' r='7' fill='none' stroke='%238B5CF6' stroke-width='1.6'/%3E%3Ccircle cx='15' cy='12' r='7' fill='none' stroke='%2222D3EE' stroke-width='1.6'/%3E%3C/svg%3E" />
 </head>
 <body>
 
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- Navigation -->
+  <!-- ===================== NAV ===================== -->
   <header class="nav" id="nav">
-    <a href="#top" class="brand" aria-label="SimFusion home">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="26" height="26"><path d="M16 2l12 7v14l-12 7L4 23V9z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 9l6 3.5v7L16 23l-6-3.5v-7z" fill="currentColor"/></svg>
-      </span>
+    <a href="#top" class="brand" aria-label="SIMFUSION home">
+      <svg class="logo-anim" viewBox="0 0 140 100" aria-hidden="true">
+        <circle class="ring ring-l" cx="55" cy="50" r="34" fill="none" stroke="#8B5CF6" stroke-width="8" stroke-dasharray="214"/>
+        <circle class="ring ring-r" cx="85" cy="50" r="34" fill="none" stroke="#22D3EE" stroke-width="8" stroke-dasharray="214"/>
+        <circle class="spark" cx="70" cy="50" r="4" fill="#eafff7"/>
+      </svg>
       <span class="brand-name">SIMFUSION</span>
     </a>
     <nav class="nav-links" id="navLinks">
-      <a href="#services">Services</a>
-      <a href="#work">What we do</a>
-      <a href="#industries">Industries</a>
-      <a href="#process">Process</a>
-      <a href="#contact" class="nav-cta">Start a Project</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#domains">Domains</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Start a project</a>
     </nav>
     <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </header>
 
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="top">
-    <div class="hero-bg" id="heroBg"></div>
-    <div class="hero-scrim"></div>
     <canvas class="hero-canvas" id="heroCanvas"></canvas>
-    <div class="hero-grid-overlay"></div>
-    <div class="hero-badge"><span class="dot"></span> SIMFUSION · RESEARCH &amp; INNOVATION STUDIO</div>
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
 
     <div class="hero-inner">
-      <div class="section-label reveal">// 001 — RESEARCH · INNOVATION · ENGINEERING</div>
-      <h1 class="hero-title">
-        <span class="reveal">WE ENGINEER</span>
-        <span class="reveal delay-1">the future of <em>software</em>.</span>
-      </h1>
-      <p class="hero-sub reveal delay-2">
-        A research &amp; innovation studio turning bold ideas into AI systems, immersive
-        XR, medical &amp; education platforms, apps, games and brands — end to end.
-      </p>
-      <div class="hero-actions reveal delay-3">
-        <a href="#contact" class="btn btn-primary">START A PROJECT</a>
-        <a href="#services" class="btn btn-ghost">EXPLORE SERVICES →</a>
+      <div class="hero-copy">
+        <div class="eyebrow reveal">SIMULATION · FUSION</div>
+        <h1 class="hero-title">
+          <span class="reveal">Where simulation</span>
+          <span class="reveal delay-1">and reality <span class="accent">converge.</span></span>
+        </h1>
+        <p class="hero-sub reveal delay-2">
+          SIMFUSION builds 3D modeling, digital twins, AR/VR and AI/ML solutions for
+          organizations that can't afford to get the model wrong — from operating rooms
+          to defence platforms.
+        </p>
+        <div class="hero-cta reveal delay-3">
+          <a href="#contact" class="btn btn-primary">Start a project</a>
+          <a href="#work" class="btn btn-ghost">View our work →</a>
+        </div>
+      </div>
+
+      <div class="hero-stage" aria-hidden="true">
+        <!-- big animated fusion logo -->
+        <svg class="logo-hero" viewBox="0 0 140 100">
+          <defs>
+            <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#2FE3B0"/>
+              <stop offset="50%" stop-color="#22D3EE"/>
+              <stop offset="100%" stop-color="#8B5CF6"/>
+            </linearGradient>
+          </defs>
+          <circle class="ring ring-l" cx="55" cy="50" r="34" fill="none" stroke="#8B5CF6" stroke-width="6" stroke-dasharray="214"/>
+          <circle class="ring ring-r" cx="85" cy="50" r="34" fill="none" stroke="#22D3EE" stroke-width="6" stroke-dasharray="214"/>
+          <circle class="spark" cx="70" cy="50" r="5" fill="#eafff7"/>
+        </svg>
+        <!-- orbiting convergence mesh -->
+        <svg class="mesh" viewBox="0 0 400 400">
+          <polygon class="mesh-a" points="200,90 280,140 280,240 200,290 120,240 120,140"/>
+          <polygon class="mesh-a" points="200,120 250,150 250,230 200,260 150,230 150,150" style="animation-delay:.15s"/>
+          <polygon class="mesh-b" points="200,90 280,140 280,240 200,290 120,240 120,140"/>
+          <polygon class="mesh-b" points="200,120 250,150 250,230 200,260 150,230 150,150" style="animation-delay:.15s"/>
+          <polygon class="mesh-core" points="200,120 250,150 250,230 200,260 150,230 150,150"/>
+        </svg>
       </div>
     </div>
-    <div class="hero-corner">37.9° N · 122.3° W · AI · XR · SOFTWARE</div>
     <div class="scroll-hint"><span></span> SCROLL TO EXPLORE</div>
   </section>
 
-  <!-- ===================== MARQUEE / TRUST ===================== -->
+  <!-- ===================== MARQUEE ===================== -->
   <section class="trust">
-    <div class="section-label center">// CAPABILITIES WE SHIP</div>
     <div class="marquee">
       <div class="marquee-track">
-        <span>ARTIFICIAL INTELLIGENCE</span><i>◆</i>
-        <span>VIRTUAL &amp; AUGMENTED REALITY</span><i>◆</i>
-        <span>MEDICAL SOFTWARE</span><i>◆</i>
-        <span>GAME DEVELOPMENT</span><i>◆</i>
-        <span>WEB &amp; MOBILE APPS</span><i>◆</i>
-        <span>UI / UX DESIGN</span><i>◆</i>
-        <span>DIGITAL MARKETING</span><i>◆</i>
-        <span>RESEARCH &amp; CONFERENCES</span><i>◆</i>
-        <span>ARTIFICIAL INTELLIGENCE</span><i>◆</i>
-        <span>VIRTUAL &amp; AUGMENTED REALITY</span><i>◆</i>
-        <span>MEDICAL SOFTWARE</span><i>◆</i>
-        <span>GAME DEVELOPMENT</span><i>◆</i>
-        <span>WEB &amp; MOBILE APPS</span><i>◆</i>
-        <span>UI / UX DESIGN</span><i>◆</i>
-        <span>DIGITAL MARKETING</span><i>◆</i>
-        <span>RESEARCH &amp; CONFERENCES</span><i>◆</i>
+        <span>3D MODELING</span><i>◇</i><span>DIGITAL TWIN</span><i>◇</i><span>AR / VR</span><i>◇</i>
+        <span>GAME DEVELOPMENT</span><i>◇</i><span>REAL-TIME GRAPHICS</span><i>◇</i><span>AI / ML</span><i>◇</i>
+        <span>3D MODELING</span><i>◇</i><span>DIGITAL TWIN</span><i>◇</i><span>AR / VR</span><i>◇</i>
+        <span>GAME DEVELOPMENT</span><i>◇</i><span>REAL-TIME GRAPHICS</span><i>◇</i><span>AI / ML</span><i>◇</i>
       </div>
     </div>
   </section>
 
-  <!-- ===================== SERVICES GRID ===================== -->
-  <section class="services" id="services">
+  <!-- ===================== STATS ===================== -->
+  <section class="stats">
+    <div class="stat reveal"><b class="count" data-to="6">0</b><span>Core disciplines</span></div>
+    <div class="stat reveal"><b class="count" data-to="2">0</b><span>Flagship domains</span></div>
+    <div class="stat reveal"><b>WebGL · Unreal · Unity</b><span>Rendering pipeline</span></div>
+    <div class="stat reveal"><b>End-to-end</b><span>From model to deploy</span></div>
+  </section>
+
+  <!-- ===================== CAPABILITIES ===================== -->
+  <section class="section" id="capabilities">
     <div class="section-head">
-      <div class="section-label reveal">// 002 — WHAT WE BUILD</div>
-      <h2 class="section-title reveal">ONE STUDIO, <em>every</em> discipline.</h2>
-      <p class="section-desc reveal">From lab research to shipped product — our teams cover the full stack of modern software and immersive technology.</p>
+      <div class="eyebrow reveal">Capabilities</div>
+      <h2 class="section-title reveal">Six disciplines, <span class="accent">one pipeline.</span></h2>
+      <p class="section-desc reveal">Every engagement draws from the same simulation and rendering pipeline — the mix changes by project, not the foundation.</p>
     </div>
-
-    <div class="service-grid">
-      <article class="service-card reveal" data-num="01">
-        <div class="svc-media"><img src="assets/research.jpg" alt="Research & Innovation" loading="lazy" /></div>
-        <div class="svc-body">
-          <h3>Research &amp; Innovation</h3>
-          <p>Applied R&amp;D, prototyping and proof-of-concepts that turn emerging science into real, deployable products.</p>
-          <div class="svc-tags"><span>Prototyping</span><span>R&amp;D</span><span>PoC</span></div>
-        </div>
+    <div class="cap-grid">
+      <article class="cap-card reveal">
+        <div class="cap-num">01</div>
+        <div class="cap-ico">◈</div>
+        <h3>3D Modeling &amp; Animation</h3>
+        <p>Production-grade assets and motion, built for both cinematic output and real-time engines.</p>
       </article>
-
-      <article class="service-card reveal" data-num="02">
-        <div class="svc-media"><img src="assets/ai.jpg" alt="AI Technologies" loading="lazy" /></div>
-        <div class="svc-body">
-          <h3>AI Technologies</h3>
-          <p>Machine learning, computer vision, LLMs and generative AI — from model training to production-grade pipelines.</p>
-          <div class="svc-tags"><span>LLMs</span><span>Vision</span><span>MLOps</span></div>
-        </div>
+      <article class="cap-card reveal">
+        <div class="cap-num">02</div>
+        <div class="cap-ico">⬡</div>
+        <h3>Digital Twin</h3>
+        <p>Live, data-connected replicas of physical systems for monitoring, testing and forecasting.</p>
       </article>
-
-      <article class="service-card reveal" data-num="03">
-        <div class="svc-media"><img src="assets/conference.jpg" alt="Conferences" loading="lazy" /></div>
-        <div class="svc-body">
-          <h3>Conferences</h3>
-          <p>Organising research &amp; software conferences — from call-for-papers platforms to live event and submission systems.</p>
-          <div class="svc-tags"><span>Research</span><span>Software</span><span>Events</span></div>
-        </div>
+      <article class="cap-card reveal">
+        <div class="cap-num">03</div>
+        <div class="cap-ico">◉</div>
+        <h3>AR / VR / MR</h3>
+        <p>Immersive training, visualization and simulation experiences across headset and mobile.</p>
       </article>
-
-      <article class="service-card reveal" data-num="04">
-        <div class="svc-media"><img src="assets/xr.jpg" alt="VR / AR / MR" loading="lazy" /></div>
-        <div class="svc-body">
-          <h3>VR / AR / MR</h3>
-          <p>Immersive experiences and mixed-reality apps for training, visualisation, retail and entertainment.</p>
-          <div class="svc-tags"><span>Unity</span><span>Unreal</span><span>WebXR</span></div>
-        </div>
+      <article class="cap-card reveal">
+        <div class="cap-num">04</div>
+        <div class="cap-ico">▲</div>
+        <h3>Game Development</h3>
+        <p>Interactive builds for training, simulation and entertainment — prototype to launch.</p>
       </article>
-
-      <article class="service-card reveal" data-num="05">
-        <div class="svc-media"><img src="assets/medical.jpg" alt="Medical & Education Software" loading="lazy" /></div>
-        <div class="svc-body">
-          <h3>Medical &amp; Education Software</h3>
-          <p>HealthTech and EdTech platforms — patient tools, diagnostics support, LMS and interactive learning apps.</p>
-          <div class="svc-tags"><span>HealthTech</span><span>EdTech</span><span>LMS</span></div>
-        </div>
+      <article class="cap-card reveal">
+        <div class="cap-num">05</div>
+        <div class="cap-ico">◐</div>
+        <h3>Real-time Graphics</h3>
+        <p>Visualization, rendering and real-time graphics that make complex data legible.</p>
       </article>
-
-      <article class="service-card reveal" data-num="06">
-        <div class="svc-media"><img src="assets/apps.jpg" alt="Web, Android & iOS Apps" loading="lazy" /></div>
-        <div class="svc-body">
-          <h3>Web, Android &amp; iOS Apps</h3>
-          <p>Scalable web apps and native/cross-platform mobile products built for performance and growth.</p>
-          <div class="svc-tags"><span>Web</span><span>Android</span><span>iOS</span></div>
-        </div>
-      </article>
-
-      <article class="service-card reveal" data-num="07">
-        <div class="svc-media"><img src="assets/game.jpg" alt="Game Development" loading="lazy" /></div>
-        <div class="svc-body">
-          <h3>Game Development</h3>
-          <p>2D/3D and hyper-casual games, WebGL builds, live-ops, ads &amp; monetisation across mobile and desktop.</p>
-          <div class="svc-tags"><span>Unity</span><span>WebGL</span><span>Live-ops</span></div>
-        </div>
-      </article>
-
-      <article class="service-card reveal" data-num="08">
-        <div class="svc-media"><img src="assets/uiux.jpg" alt="UI / UX Design" loading="lazy" /></div>
-        <div class="svc-body">
-          <h3>UI / UX Design</h3>
-          <p>Research-driven product design, design systems and prototypes that make complex products feel effortless.</p>
-          <div class="svc-tags"><span>Design Systems</span><span>Prototyping</span></div>
-        </div>
-      </article>
-
-      <article class="service-card reveal" data-num="09">
-        <div class="svc-media"><img src="assets/marketing.jpg" alt="Digital Marketing" loading="lazy" /></div>
-        <div class="svc-body">
-          <h3>Digital Marketing</h3>
-          <p>Performance marketing, SEO, content and brand growth engineered around your product and analytics.</p>
-          <div class="svc-tags"><span>SEO</span><span>Ads</span><span>Growth</span></div>
-        </div>
+      <article class="cap-card reveal">
+        <div class="cap-num">06</div>
+        <div class="cap-ico">✦</div>
+        <h3>AI / ML</h3>
+        <p>Models that read, predict and act on simulation data — embedded into the pipeline.</p>
       </article>
     </div>
   </section>
 
-  <!-- ===================== FEATURE BLOCKS ===================== -->
-  <section class="feature" id="work">
-    <div class="feature-inner">
-      <div class="feature-copy reveal">
-        <div class="section-label">// 003 — AI TECHNOLOGIES</div>
-        <h2 class="feature-title">Intelligence, <em>engineered</em> in.</h2>
-        <p>We design and ship AI that actually works in production — vision models, LLM-powered assistants, recommendation engines and generative pipelines, wrapped in reliable infrastructure and clean interfaces.</p>
-        <ul class="feature-list">
-          <li>Computer vision &amp; detection</li>
-          <li>LLM apps &amp; RAG systems</li>
-          <li>Generative AI &amp; automation</li>
-          <li>Model training &amp; MLOps</li>
-        </ul>
-      </div>
-      <div class="feature-visual reveal">
-        <div class="media-frame"><img src="assets/ai.jpg" alt="AI robotics" loading="lazy" /></div>
-        <div class="float-card fc-tr">
-          <div class="ai-bars"><i style="--h:70%"></i><i style="--h:90%"></i><i style="--h:45%"></i><i style="--h:80%"></i><i style="--h:60%"></i><i style="--h:95%"></i></div>
-          <span class="fc-label">● INFERENCE LIVE · <b class="count" data-to="98">0</b>.4%</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="feature feature-alt">
-    <div class="feature-inner reverse">
-      <div class="feature-copy reveal">
-        <div class="section-label">// 004 — VR / AR / MR</div>
-        <h2 class="feature-title">Worlds you can <em>step into</em>.</h2>
-        <p>Immersive simulations, training environments and mixed-reality apps built in Unity and Unreal — from medical training and industrial digital twins to games and interactive brand experiences.</p>
-        <ul class="feature-list">
-          <li>Immersive training &amp; sims</li>
-          <li>AR product &amp; retail apps</li>
-          <li>WebXR experiences</li>
-          <li>3D &amp; digital twins</li>
-        </ul>
-      </div>
-      <div class="feature-visual reveal">
-        <div class="media-frame"><img src="assets/xr.jpg" alt="VR headset" loading="lazy" /></div>
-        <div class="float-card fc-bl">
-          <span class="fc-big">6DOF</span>
-          <span class="fc-label">IMMERSIVE · REALTIME</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- ===================== FEATURE: DIGITAL TWIN ===================== -->
   <section class="feature">
     <div class="feature-inner">
       <div class="feature-copy reveal">
-        <div class="section-label">// 005 — GAME DEVELOPMENT</div>
-        <h2 class="feature-title">Games that <em>ship &amp; scale</em>.</h2>
-        <p>We build and port 2D/3D and hyper-casual games across mobile, desktop and WebGL — complete with AdMob, Firebase analytics, remote config and live-ops so your titles grow after launch.</p>
+        <div class="eyebrow">Signature capability</div>
+        <h2 class="feature-title">Digital twins that <span class="accent">mirror reality.</span></h2>
+        <p>We build live, data-connected replicas of physical systems — so teams can monitor, stress-test and forecast against a model that behaves exactly like the real thing, long before anything ships or goes live.</p>
         <ul class="feature-list">
-          <li>Unity &amp; WebGL builds</li>
-          <li>Ads &amp; monetisation</li>
-          <li>Analytics &amp; live-ops</li>
-          <li>Cross-platform release</li>
+          <li>Real-time data binding &amp; telemetry</li>
+          <li>Physics-accurate simulation</li>
+          <li>Scenario testing &amp; forecasting</li>
+          <li>WebGL / Unreal / Unity delivery</li>
         </ul>
       </div>
       <div class="feature-visual reveal">
-        <div class="media-frame"><img src="assets/game.jpg" alt="Game development" loading="lazy" /></div>
-        <div class="float-card fc-tr">
-          <span class="fc-big count" data-to="1240">0</span>
-          <span class="fc-label">PLAYS · 42% RETENTION</span>
-        </div>
+        <div class="media-frame"><img src="assets/research.jpg" alt="Digital twin visualization" loading="lazy" /></div>
+        <div class="float-card fc-tr"><span class="fc-big count" data-to="60">0</span><span class="fc-label">FPS · REAL-TIME TWIN</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== INDUSTRIES ===================== -->
-  <section class="industries" id="industries">
-    <div class="section-head">
-      <div class="section-label reveal">// 006 — WHO WE BUILD FOR</div>
-      <h2 class="section-title reveal">Built for teams <em>shipping</em> what's next.</h2>
-    </div>
-    <div class="industry-grid">
-      <div class="industry-card reveal"><b>01</b><h3>Healthcare</h3><p>Diagnostics, patient platforms &amp; medical training software.</p></div>
-      <div class="industry-card reveal"><b>02</b><h3>Education</h3><p>LMS, interactive learning &amp; research collaboration tools.</p></div>
-      <div class="industry-card reveal"><b>03</b><h3>Enterprise</h3><p>AI automation, internal tools &amp; data platforms.</p></div>
-      <div class="industry-card reveal"><b>04</b><h3>Entertainment</h3><p>Games, XR experiences &amp; interactive media.</p></div>
-      <div class="industry-card reveal"><b>05</b><h3>Startups</h3><p>MVPs, product design &amp; go-to-market growth.</p></div>
-      <div class="industry-card reveal"><b>06</b><h3>Research Labs</h3><p>Prototypes, conferences &amp; publication platforms.</p></div>
+  <!-- ===================== FEATURE: AR/VR ===================== -->
+  <section class="feature feature-alt">
+    <div class="feature-inner reverse">
+      <div class="feature-copy reveal">
+        <div class="eyebrow">Immersive systems</div>
+        <h2 class="feature-title">Train &amp; visualize <span class="accent">in the loop.</span></h2>
+        <p>Immersive AR/VR/MR environments for surgical rehearsal, equipment operation and systems training — repeatable, measurable and safe. Practice the edge cases without the real-world cost.</p>
+        <ul class="feature-list">
+          <li>Headset &amp; mobile XR</li>
+          <li>Surgical &amp; clinical rehearsal</li>
+          <li>Defence systems trainers</li>
+          <li>Performance analytics built-in</li>
+        </ul>
+      </div>
+      <div class="feature-visual reveal">
+        <div class="media-frame"><img src="assets/xr.jpg" alt="Immersive AR/VR training" loading="lazy" /></div>
+        <div class="float-card fc-bl"><span class="fc-big">6DOF</span><span class="fc-label">IMMERSIVE · REPEATABLE</span></div>
+      </div>
     </div>
   </section>
 
-  <!-- ===================== ABOUT STRIP ===================== -->
-  <section class="about">
-    <div class="about-media"><img src="assets/team.jpg" alt="SimFusion team" loading="lazy" /></div>
+  <!-- ===================== DOMAINS ===================== -->
+  <section class="section domains" id="domains">
+    <div class="section-head">
+      <div class="eyebrow reveal">Domains</div>
+      <h2 class="section-title reveal">Built for <span class="accent">high-stakes</span> environments.</h2>
+      <p class="section-desc reveal">The same pipeline, tuned to the constraints each industry actually operates under.</p>
+    </div>
+    <div class="domain-row">
+      <a class="domain-item reveal" href="#contact">
+        <div class="domain-name">Medical <span class="domain-tag">Surgical &amp; clinical simulation</span></div>
+        <div class="domain-arrow">→</div>
+      </a>
+      <a class="domain-item reveal" href="#contact">
+        <div class="domain-name">Defence <span class="domain-tag">Training &amp; systems simulation</span></div>
+        <div class="domain-arrow">→</div>
+      </a>
+      <a class="domain-item reveal" href="#contact">
+        <div class="domain-name">Other Industries <span class="domain-tag">Custom engagements</span></div>
+        <div class="domain-arrow">→</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== WORK ===================== -->
+  <section class="section" id="work">
+    <div class="section-head">
+      <div class="eyebrow reveal">Selected work</div>
+      <h2 class="section-title reveal">Recent case studies.</h2>
+      <p class="section-desc reveal">A snapshot of the kind of high-fidelity simulation work we deliver end-to-end.</p>
+    </div>
+    <div class="port-grid">
+      <article class="port-card reveal">
+        <div class="port-media"><img src="assets/medical.jpg" alt="Cardiac procedure simulator" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Medical · Digital Twin</div><h3>Cardiac procedure simulator</h3><p>A real-time twin used for pre-operative planning and trainee practice.</p></div>
+      </article>
+      <article class="port-card reveal">
+        <div class="port-media"><img src="assets/xr.jpg" alt="Field systems trainer" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Defence · AR/VR</div><h3>Field systems trainer</h3><p>An immersive VR trainer for equipment operation under realistic conditions.</p></div>
+      </article>
+      <article class="port-card reveal">
+        <div class="port-media"><img src="assets/ai.jpg" alt="Predictive visualization suite" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">AI/ML · Graphics</div><h3>Predictive visualization suite</h3><p>ML-driven forecasting layered onto a live 3D operations dashboard.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about" id="about">
+    <div class="about-media"><img src="assets/team.jpg" alt="SIMFUSION team" loading="lazy" /></div>
     <div class="about-copy reveal">
-      <div class="section-label">// ABOUT SIMFUSION</div>
-      <h2 class="about-title">One team, from <em>research</em> to <em>release</em>.</h2>
-      <p>SimFusion is a multidisciplinary research &amp; innovation studio. We bring engineers, researchers, designers and marketers under one roof — so an idea can travel from a whiteboard concept to a shipped, marketed product without ever leaving the building.</p>
-      <div class="stats">
-        <div class="stat"><b class="count" data-to="12">0</b><span>+ Products shipped</span></div>
-        <div class="stat"><b class="count" data-to="9">0</b><span>Core disciplines</span></div>
-        <div class="stat"><b class="count" data-to="8">0</b><span>+ Years R&amp;D</span></div>
-        <div class="stat"><b class="count" data-to="100">0</b><span>% In-house</span></div>
+      <div class="eyebrow">About SIMFUSION</div>
+      <h2 class="about-title">One pipeline, <span class="accent">model to deploy.</span></h2>
+      <p>SIMFUSION is a simulation-first studio. We bring 3D artists, engineers, and AI researchers under one roof — so a concept can travel from model, to twin, to immersive deployment without ever leaving the pipeline. Built for the domains where getting the model wrong isn't an option.</p>
+      <div class="about-stats">
+        <div class="stat"><b class="count" data-to="6">0</b><span>Disciplines</span></div>
+        <div class="stat"><b class="count" data-to="2">0</b><span>Flagship domains</span></div>
+        <div class="stat"><b>100<span class="accent">%</span></b><span>In-house pipeline</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== PROCESS ===================== -->
-  <section class="process" id="process">
-    <div class="section-head">
-      <div class="section-label reveal">// 007 — HOW WE WORK</div>
-      <h2 class="section-title reveal">From <em>idea</em> to launch.</h2>
-    </div>
-    <div class="process-track">
-      <div class="proc-step reveal"><span>01</span><h3>Discover</h3><p>Research, scope &amp; strategy. We map the problem before writing a line of code.</p></div>
-      <div class="proc-step reveal"><span>02</span><h3>Design</h3><p>UX, architecture &amp; prototypes to validate direction fast.</p></div>
-      <div class="proc-step reveal"><span>03</span><h3>Build</h3><p>Agile engineering across AI, XR, web, mobile &amp; games.</p></div>
-      <div class="proc-step reveal"><span>04</span><h3>Launch &amp; Grow</h3><p>Deploy, measure, market and iterate for real traction.</p></div>
-    </div>
-  </section>
-
-  <!-- ===================== CTA / CONTACT ===================== -->
+  <!-- ===================== CTA ===================== -->
   <section class="cta" id="contact">
     <div class="cta-inner reveal">
-      <div class="section-label center">// 008 — LET'S BUILD</div>
-      <h2 class="cta-title">Have an idea? <em>Let's forge it.</em></h2>
-      <p>Tell us what you want to build — AI, an app, a game, an immersive experience or a full research platform — and we'll make it real.</p>
+      <h2 class="cta-title">Have a simulation problem worth <span class="accent">solving properly?</span></h2>
+      <p>Tell us the system you need modelled, twinned or trained — medical, defence or beyond — and we'll build it end-to-end.</p>
       <form class="cta-form" id="contactForm" novalidate>
         <input type="text" name="name" placeholder="Your name" required />
         <input type="email" name="email" placeholder="Email address" required />
-        <input type="text" name="project" placeholder="What do you want to build?" />
-        <button type="submit" class="btn btn-primary">SEND REQUEST →</button>
+        <input type="text" name="project" placeholder="What do you want to simulate?" />
+        <button type="submit" class="btn btn-primary">Send request →</button>
       </form>
       <p class="form-note" id="formNote"></p>
       <a class="cta-mail" href="mailto:simfusion26@gmail.com">simfusion26@gmail.com</a>
@@ -314,19 +276,25 @@
   <footer class="footer">
     <div class="footer-top">
       <div class="footer-brand">
-        <span class="brand-name">SIMFUSION</span>
-        <p>Research &amp; innovation studio for AI, XR and modern software.</p>
+        <a href="#top" class="brand">
+          <svg class="logo-anim static" viewBox="0 0 140 100" aria-hidden="true">
+            <circle cx="55" cy="50" r="34" fill="none" stroke="#8B5CF6" stroke-width="8"/>
+            <circle cx="85" cy="50" r="34" fill="none" stroke="#22D3EE" stroke-width="8"/>
+          </svg>
+          <span class="brand-name">SIMFUSION</span>
+        </a>
+        <p>3D Modeling, Digital Twin, AR/VR and AI/ML solutions across Medical, Defence and beyond.</p>
         <a class="footer-mail" href="mailto:simfusion26@gmail.com">simfusion26@gmail.com</a>
       </div>
       <div class="footer-cols">
-        <div><h4>Services</h4><a href="#services">AI Technologies</a><a href="#services">VR / AR / MR</a><a href="#services">Web &amp; Mobile</a><a href="#services">Game Dev</a></div>
-        <div><h4>Company</h4><a href="#work">What we do</a><a href="#process">Process</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div>
+        <div><h4>Capabilities</h4><a href="#capabilities">Digital Twin</a><a href="#capabilities">AR / VR</a><a href="#capabilities">AI / ML</a><a href="#capabilities">Game Dev</a></div>
+        <div><h4>Company</h4><a href="#about">About</a><a href="#work">Work</a><a href="#domains">Domains</a><a href="#contact">Contact</a></div>
         <div><h4>Connect</h4><a href="mailto:simfusion26@gmail.com">Email us</a><a href="#">LinkedIn</a><a href="#">X / Twitter</a></div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> SimFusion. All rights reserved.</span>
-      <span>Designed &amp; engineered in-house.</span>
+      <span>© <span id="year"></span> SIMFUSION. All rights reserved.</span>
+      <span>Where simulation &amp; reality converge.</span>
     </div>
   </footer>
 
