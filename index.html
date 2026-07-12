@@ -159,16 +159,16 @@
       <div class="feature-copy reveal">
         <div class="eyebrow">Signature capability</div>
         <h2 class="feature-title">Digital twins that <span class="accent">mirror reality.</span></h2>
-        <p>We build live, data-connected replicas of physical systems — so teams can monitor, stress-test and forecast against a model that behaves exactly like the real thing, long before anything ships or goes live.</p>
+        <p>Live, data-connected replicas of physical systems — road networks, vehicle movement and autonomous fleets — so teams can monitor, stress-test and forecast against a model that behaves exactly like the real thing, long before anything goes live.</p>
         <ul class="feature-list">
-          <li>Real-time data binding &amp; telemetry</li>
-          <li>Physics-accurate simulation</li>
-          <li>Scenario testing &amp; forecasting</li>
+          <li>Autonomous vehicle &amp; traffic twins</li>
+          <li>Real-time telemetry &amp; data binding</li>
+          <li>Physics-accurate scenario testing</li>
           <li>WebGL / Unreal / Unity delivery</li>
         </ul>
       </div>
       <div class="feature-visual reveal">
-        <div class="media-frame"><img src="assets/research.jpg" alt="Digital twin visualization" loading="lazy" /></div>
+        <div class="media-frame"><img src="assets/autonomous.jpg" alt="Autonomous vehicle digital twin" loading="lazy" /></div>
         <div class="float-card fc-tr"><span class="fc-big count" data-to="60">0</span><span class="fc-label">FPS · REAL-TIME TWIN</span></div>
       </div>
     </div>
@@ -222,22 +222,88 @@
   <section class="section" id="work">
     <div class="section-head">
       <div class="eyebrow reveal">Selected work</div>
-      <h2 class="section-title reveal">Recent case studies.</h2>
-      <p class="section-desc reveal">A snapshot of the kind of high-fidelity simulation work we deliver end-to-end.</p>
+      <h2 class="section-title reveal">Projects across <span class="accent">every discipline.</span></h2>
+      <p class="section-desc reveal">Real simulation work — medical, defence, AI, digital twins, 3D and research — delivered end-to-end.</p>
+      <div class="work-filters reveal" id="workFilters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="medical">Medical</button>
+        <button class="filter" data-filter="defence">Defence</button>
+        <button class="filter" data-filter="ai">AI / ML</button>
+        <button class="filter" data-filter="twin">Digital Twin</button>
+        <button class="filter" data-filter="media">3D &amp; Media</button>
+        <button class="filter" data-filter="research">Research</button>
+      </div>
     </div>
-    <div class="port-grid">
-      <article class="port-card reveal">
-        <div class="port-media"><img src="assets/medical.jpg" alt="Cardiac procedure simulator" loading="lazy" /></div>
-        <div class="port-body"><div class="port-tag">Medical · Digital Twin</div><h3>Cardiac procedure simulator</h3><p>A real-time twin used for pre-operative planning and trainee practice.</p></div>
+    <div class="port-grid" id="portGrid">
+
+      <!-- MEDICAL -->
+      <article class="port-card reveal" data-cat="medical">
+        <div class="port-media"><img src="assets/anatomy.jpg" alt="OrganVerse 3D organs" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Medical · AR / VR / MR</div><h3>OrganVerse — 3D Organs</h3><p>Interactive 3D anatomy — explore the heart, skull and organ systems in immersive VR/AR/MR for training and pre-op study.</p></div>
       </article>
-      <article class="port-card reveal">
-        <div class="port-media"><img src="assets/xr.jpg" alt="Field systems trainer" loading="lazy" /></div>
-        <div class="port-body"><div class="port-tag">Defence · AR/VR</div><h3>Field systems trainer</h3><p>An immersive VR trainer for equipment operation under realistic conditions.</p></div>
+      <article class="port-card reveal" data-cat="medical">
+        <div class="port-media"><img src="assets/skull.jpg" alt="MedPlan surgical planning software" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Medical · Desktop Software</div><h3>MedPlan Studio</h3><p>A Windows/macOS desktop application that turns CT/MRI scans into 3D pre-operative surgical plans.</p></div>
       </article>
-      <article class="port-card reveal">
-        <div class="port-media"><img src="assets/ai.jpg" alt="Predictive visualization suite" loading="lazy" /></div>
-        <div class="port-body"><div class="port-tag">AI/ML · Graphics</div><h3>Predictive visualization suite</h3><p>ML-driven forecasting layered onto a live 3D operations dashboard.</p></div>
+      <article class="port-card reveal" data-cat="medical">
+        <div class="port-media"><img src="assets/medapp.jpg" alt="VitalTrack patient mobile app" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Medical · Android &amp; iOS</div><h3>VitalTrack — Patient App</h3><p>Cross-platform mobile app for medication reminders, vitals monitoring and secure tele-consultation.</p></div>
       </article>
+
+      <!-- DEFENCE -->
+      <article class="port-card reveal" data-cat="defence">
+        <div class="port-media"><img src="assets/xr.jpg" alt="Sentinel VR combat trainer" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Defence · VR Simulator</div><h3>Sentinel VR — Combat Trainer</h3><p>An immersive VR simulator for equipment operation and field drills under realistic, repeatable conditions.</p></div>
+      </article>
+      <article class="port-card reveal" data-cat="defence">
+        <div class="port-media"><img src="assets/controlroom.jpg" alt="Iron Front war simulator" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Defence · Desktop Simulator</div><h3>Iron Front — War Simulator</h3><p>A real-time desktop war-game &amp; command simulator for large-scale battlefield strategy and systems training.</p></div>
+      </article>
+      <article class="port-card reveal" data-cat="defence">
+        <div class="port-media"><img src="assets/tankwar.jpg" alt="Hostage rescue tactical simulation" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Defence · Tactical Sim</div><h3>Black Hawk — Hostage Rescue</h3><p>A close-quarters hostage-rescue scenario trainer with dynamic AI threats and after-action review.</p></div>
+      </article>
+      <article class="port-card reveal" data-cat="defence">
+        <div class="port-media"><img src="assets/cyber.jpg" alt="Counter-intelligence search simulation" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Defence · Intelligence</div><h3>CI-Search — Counter-Intel Sim</h3><p>A counter-intelligence search &amp; surveillance simulation for signal analysis and threat-tracking training.</p></div>
+      </article>
+
+      <!-- AI / ML -->
+      <article class="port-card reveal" data-cat="ai">
+        <div class="port-media"><img src="assets/blender3d.jpg" alt="Reinforcement learning simulator" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">AI/ML · Reinforcement Learning</div><h3>NeuroDrive RL</h3><p>Reinforcement-learning agents trained inside high-fidelity simulated environments before real-world deployment.</p></div>
+      </article>
+      <article class="port-card reveal" data-cat="ai">
+        <div class="port-media"><img src="assets/ai.jpg" alt="Machine learning vision suite" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">AI/ML · Computer Vision</div><h3>VisionAI Suite</h3><p>Machine-learning detection, prediction and generative models embedded directly into the simulation pipeline.</p></div>
+      </article>
+
+      <!-- DIGITAL TWIN -->
+      <article class="port-card reveal" data-cat="twin">
+        <div class="port-media"><img src="assets/selfdrive.jpg" alt="Autonomous vehicle digital twin" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Digital Twin · Autonomous</div><h3>TwinRoad — AV &amp; Traffic Twin</h3><p>A live digital twin of road networks — vehicle movement, traffic flow and autonomous-vehicle testing.</p></div>
+      </article>
+      <article class="port-card reveal" data-cat="twin">
+        <div class="port-media"><img src="assets/research.jpg" alt="Operations digital twin" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Digital Twin · Operations</div><h3>OpsMirror</h3><p>A data-connected twin of a physical facility for live monitoring, forecasting and what-if scenario testing.</p></div>
+      </article>
+
+      <!-- 3D & MEDIA -->
+      <article class="port-card reveal" data-cat="media">
+        <div class="port-media"><img src="assets/render3d.jpg" alt="Genesis 3D modeling and animation" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">3D · Blender Modeling &amp; Animation</div><h3>Genesis 3D</h3><p>Production-grade 3D modeling and cinematic animation in Blender — from concept assets to real-time engines.</p></div>
+      </article>
+      <article class="port-card reveal" data-cat="media">
+        <div class="port-media"><img src="assets/videoedit.jpg" alt="MotionCut video editing" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Media · Video Editing</div><h3>MotionCut — Post &amp; VFX</h3><p>Cinematic video editing, motion graphics and VFX post-production for product films and trailers.</p></div>
+      </article>
+
+      <!-- RESEARCH -->
+      <article class="port-card reveal" data-cat="research">
+        <div class="port-media"><img src="assets/conference.jpg" alt="Research conference platform" loading="lazy" /></div>
+        <div class="port-body"><div class="port-tag">Research · Conferences</div><h3>SimFusion Research Summit</h3><p>We organise and build the platforms for research &amp; software conferences — submissions, review and live events.</p></div>
+      </article>
+
     </div>
   </section>
 

@@ -30,6 +30,28 @@
     c.style.transitionDelay = i * 0.1 + 's';
   });
 
+  /* ---------- Work filters ---------- */
+  var filterBar = document.getElementById('workFilters');
+  var portGrid = document.getElementById('portGrid');
+  if (filterBar && portGrid) {
+    var cards = [].slice.call(portGrid.querySelectorAll('.port-card'));
+    filterBar.addEventListener('click', function (e) {
+      var btn = e.target.closest('.filter');
+      if (!btn) return;
+      filterBar.querySelectorAll('.filter').forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var f = btn.getAttribute('data-filter');
+      cards.forEach(function (c) {
+        var show = f === 'all' || c.getAttribute('data-cat') === f;
+        c.classList.toggle('is-hidden', !show);
+      });
+      // retrigger pop-in animation
+      portGrid.classList.remove('filtering');
+      void portGrid.offsetWidth;
+      portGrid.classList.add('filtering');
+    });
+  }
+
   /* ---------- Mobile menu ---------- */
   var toggle = document.getElementById('navToggle');
   var links = document.getElementById('navLinks');

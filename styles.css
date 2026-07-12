@@ -219,7 +219,18 @@ img{display:block;max-width:100%}
 /* ==========================================================================
    WORK / PORTFOLIO
    ========================================================================== */
+.work-filters{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.filter{
+  font-family:"Space Mono",monospace;font-size:12.5px;letter-spacing:.04em;color:var(--muted);
+  background:transparent;border:1px solid var(--line);border-radius:30px;padding:8px 16px;cursor:pointer;
+  transition:color .3s,border-color .3s,background .3s,transform .2s;
+}
+.filter:hover{color:var(--text);border-color:var(--muted)}
+.filter.active{color:#04110d;background:var(--grad);border-color:transparent;font-weight:700}
 .port-grid{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,56px);display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.port-card.is-hidden{display:none}
+.port-grid.filtering .port-card:not(.is-hidden){animation:popIn .45s var(--ease) both}
+@keyframes popIn{0%{opacity:0;transform:translateY(16px) scale(.97)}100%{opacity:1;transform:none}}
 .port-card{border:1px solid var(--line-2);border-radius:var(--radius);overflow:hidden;background:var(--surface);transition:transform .45s var(--ease),border-color .45s,box-shadow .45s}
 .port-card:hover{transform:translateY(-8px);border-color:var(--line);box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
 .port-media{position:relative;height:190px;overflow:hidden}
@@ -282,6 +293,7 @@ img{display:block;max-width:100%}
   .hero-stage{min-height:300px;order:-1}
   .logo-hero{width:min(240px,60%)}
   .cap-grid{grid-template-columns:repeat(2,1fr)}
+  .port-grid{grid-template-columns:repeat(2,1fr)}
   .feature-inner{grid-template-columns:1fr;gap:40px}
   .feature-inner.reverse .feature-copy{order:0}
   .about{grid-template-columns:1fr}
