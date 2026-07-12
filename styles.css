@@ -317,6 +317,39 @@ img{display:block;max-width:100%}
   .footer-bottom{flex-direction:column;gap:8px}
   .float-card{transform:scale(.85)}
 }
+/* ---------- Large desktops: scale up so content fills big monitors ---------- */
+@media(min-width:1600px){
+  :root{--maxw:1440px}
+  body{font-size:17px}
+  .hero-inner{gap:60px}
+  .hero-title{font-size:90px}
+  .hero-sub{font-size:21px;max-width:600px}
+  .logo-hero{width:400px}
+  .section-title,.feature-title{font-size:60px}
+  .cta-title{font-size:64px}
+  .about-title{font-size:54px}
+  .section-desc,.feature-copy>p,.about-copy>p{font-size:18px}
+  .cap-card h3,.port-body h3{font-size:21px}
+  .cap-card p,.port-body p{font-size:15.5px}
+  .cap-card{padding:40px 36px 36px}
+  .stat b{font-size:34px}
+  .nav-links{gap:38px}
+  .nav-links a{font-size:15px}
+}
+@media(min-width:2000px){
+  :root{--maxw:1620px}
+  body{font-size:18px}
+  .hero-title{font-size:108px}
+  .hero-sub{font-size:23px;max-width:660px}
+  .logo-hero{width:460px}
+  .section-title,.feature-title{font-size:70px}
+  .cta-title{font-size:76px}
+  .about-title{font-size:62px}
+  .section-desc,.feature-copy>p,.about-copy>p{font-size:19px}
+  .marquee-track span{font-size:40px}
+  .port-body h3,.cap-card h3{font-size:23px}
+}
+
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   .reveal{opacity:1;transform:none}
