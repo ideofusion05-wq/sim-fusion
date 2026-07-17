@@ -93,22 +93,181 @@
     requestAnimationFrame(step);
   }
 
-  /* ---------- Contact form (demo) ---------- */
+  /* ==========================================================================
+     EMAIL DELIVERY
+     Every enquiry and application goes to both inboxes below.
+
+     A static page cannot send mail on its own. With FORM_ENDPOINT empty we open
+     the visitor's mail app pre-addressed to both (mailto can't carry the resume
+     file, so we ask them to attach it). Fill in FORM_ENDPOINT + FORM_ACCESS_KEY
+     with a form service (e.g. Web3Forms) and the page posts directly instead —
+     resume file included, no mail app needed.
+     ========================================================================== */
+  var RECIPIENTS = ['hr@sim-fusion.com', 'simfusion26@gmail.com'];
+  var FORM_ENDPOINT = '';   // e.g. 'https://api.web3forms.com/submit'
+  var FORM_ACCESS_KEY = ''; // access key from that service
+
+  function isEmail(v) { return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v); }
+  function useEndpoint() { return !!(FORM_ENDPOINT && FORM_ACCESS_KEY); }
+
+  function openMail(subject, lines) {
+    window.location.href = 'mailto:' + RECIPIENTS.join(',') +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(lines.join('\n'));
+  }
+
+  function postForm(fd, subject) {
+    fd.append('access_key', FORM_ACCESS_KEY);
+    fd.append('subject', subject);
+    fd.append('to', RECIPIENTS.join(','));
+    return fetch(FORM_ENDPOINT, { method: 'POST', body: fd })
+      .then(function (r) { return r.json().catch(function () { return {}; }); });
+  }
+
+  /* ---------- Contact form ---------- */
   var form = document.getElementById('contactForm');
   var note = document.getElementById('formNote');
   if (form) {
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();
-      var name = form.name.value.trim();
-      var email = form.email.value.trim();
-      if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      var name = form.elements['name'].value.trim();
+      var email = form.elements['email'].value.trim();
+      var project = form.elements['project'].value.trim();
+      if (!name || !isEmail(email)) {
+        note.className = 'form-note warn';
         note.textContent = '⚠ Please enter a valid name and email.';
-        note.style.color = '#ff8a8a';
         return;
       }
-      note.style.color = '';
-      note.textContent = '✓ Thanks ' + name + ' — we\'ll be in touch shortly.';
-      form.reset();
+      var subject = 'New enquiry — ' + name;
+      note.className = 'form-note';
+
+      if (useEndpoint()) {
+        note.textContent = 'Sending…';
+        postForm(new FormData(form), subject).then(function (res) {
+          if (res && res.success === false) {
+            note.className = 'form-note warn';
+            note.textContent = '⚠ Could not send — please email us directly.';
+            return;
+          }
+          note.textContent = '✓ Thanks ' + name + ' — we\'ll be in touch shortly.';
+          form.reset();
+        }).catch(function () {
+          note.className = 'form-note warn';
+          note.textContent = '⚠ Could not send — please email us directly.';
+        });
+      } else {
+        openMail(subject, [
+          'Name: ' + name,
+          'Email: ' + email,
+          'What they want to simulate: ' + (project || '—'),
+          '',
+          'Sent from the SIMFUSION website.'
+        ]);
+        note.textContent = '✓ Opening your email app — press send to reach both our inboxes.';
+      }
+    });
+  }
+
+  /* ---------- Apply modal ---------- */
+  var modal = document.getElementById('applyModal');
+  if (modal) {
+    var applyForm = document.getElementById('applyForm');
+    var applyTitle = document.getElementById('applyTitle');
+    var applyNote = document.getElementById('applyNote');
+    var fileInput = document.getElementById('resumeInput');
+    var fileText = document.getElementById('fileText');
+    var fileField = modal.querySelector('.file-field');
+    var FILE_PLACEHOLDER = 'Attach resume file — optional';
+    var currentRole = '';
+    var lastFocus = null;
+
+    function resetFile() {
+      fileText.textContent = FILE_PLACEHOLDER;
+      fileField.classList.remove('has-file');
+    }
+    function openModal(role) {
+      currentRole = role;
+      applyTitle.textContent = role;
+      applyNote.textContent = '';
+      applyNote.className = 'modal-note';
+      applyForm.reset();
+      resetFile();
+      modal.hidden = false;
+      document.body.classList.add('modal-open');
+      lastFocus = document.activeElement;
+      setTimeout(function () { applyForm.elements['name'].focus(); }, 60);
+    }
+    function closeModal() {
+      modal.hidden = true;
+      document.body.classList.remove('modal-open');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    document.querySelectorAll('.job-apply').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        openModal(btn.getAttribute('data-role') || 'Open position');
+      });
+    });
+    modal.addEventListener('click', function (e) {
+      if (e.target.hasAttribute('data-close')) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.hidden) closeModal();
+    });
+    fileInput.addEventListener('change', function () {
+      var f = fileInput.files[0];
+      if (f) { fileText.textContent = f.name; fileField.classList.add('has-file'); }
+      else resetFile();
+    });
+
+    applyForm.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var name = applyForm.elements['name'].value.trim();
+      var email = applyForm.elements['email'].value.trim();
+      var msg = applyForm.elements['message'].value.trim();
+      var link = applyForm.elements['link'].value.trim();
+      var file = fileInput.files[0];
+      if (!name || !isEmail(email)) {
+        applyNote.className = 'modal-note warn';
+        applyNote.textContent = '⚠ Please enter a valid name and email.';
+        return;
+      }
+      var subject = 'Application — ' + currentRole;
+      applyNote.className = 'modal-note';
+
+      if (useEndpoint()) {
+        applyNote.textContent = 'Sending…';
+        var fd = new FormData(applyForm);
+        fd.append('position', currentRole);
+        postForm(fd, subject).then(function (res) {
+          if (res && res.success === false) {
+            applyNote.className = 'modal-note warn';
+            applyNote.textContent = '⚠ Could not send — please email hr@sim-fusion.com directly.';
+            return;
+          }
+          applyNote.textContent = '✓ Application sent — thanks ' + name + '!';
+          setTimeout(closeModal, 1800);
+        }).catch(function () {
+          applyNote.className = 'modal-note warn';
+          applyNote.textContent = '⚠ Could not send — please email hr@sim-fusion.com directly.';
+        });
+      } else {
+        openMail(subject, [
+          'Position: ' + currentRole,
+          'Name: ' + name,
+          'Email: ' + email,
+          'What they want to simulate: ' + (msg || '—'),
+          'Portfolio / resume link: ' + (link || '—'),
+          '',
+          file ? 'Resume file: "' + file.name + '" — please attach it before sending.'
+               : 'Resume file: none attached.',
+          '',
+          'Sent from the SIMFUSION website.'
+        ]);
+        applyNote.textContent = file
+          ? '✓ Opening your email app — attach "' + file.name + '" and press send.'
+          : '✓ Opening your email app — press send.';
+      }
     });
   }
 
